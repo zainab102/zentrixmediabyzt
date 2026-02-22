@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Zentrix Media - AI-Powered Client Acquisition</title>
+    <meta name="description"
+        content="Meet Zainab, founder of Zentrix Media. Learn about our mission to help businesses scale globally through intelligent marketing systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            padding: 10rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(198, 167, 94, 0.1), transparent 70%);
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .founder-section {
+            padding: 6rem 0;
+            background-color: var(--bg-primary);
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .founder-image {
+            position: relative;
+            height: 500px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(11, 15, 25, 0.7), transparent);
+        }
+
+        .founder-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        .founder-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-section {
+            padding: 6rem 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .mission-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        .mission-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .values-section {
+            padding: 6rem 0;
+            background-color: var(--bg-primary);
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid rgba(198, 167, 94, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px var(--shadow-gold);
+            border-color: var(--accent-gold);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .value-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .about-cta {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent 70%);
+        }
+
+        .about-cta .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        @media (max-width: 768px) {
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .founder-image {
+                height: 400px;
+                order: 1;
+            }
+
+            .founder-content {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-nav">
+        <div class="container">
+            <div class="logo">Zentrix <span>Media</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our-system.html">The System</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="book-call.html" class="cta-btn">Apply</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero fade-in">
+            <div class="container">
+                <h1>About Zentrix Media</h1>
+                <p>We're an AI-focused client acquisition firm helping businesses implement scalable marketing
+                    infrastructure designed for predictable revenue growth across e-commerce, coaching, local
+                    businesses, international brands, restaurants, and personal branding.</p>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="founder-section fade-in">
+            <div class="container">
+                <div class="founder-grid">
+                    <div class="founder-image">
+                        <img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04073133/crm3.png" alt="CRM pipeline dashboard" loading="lazy" decoding="async"
+                            alt="Zainab - Founder of Zentrix Media">
+                    </div>
+                    <div class="founder-content">
+                        <h2>Meet Zainab – Founder of Zentrix Media</h2>
+                        <p>As a performance marketing specialist with a focus on AI automation, I founded Zentrix Media
+                            to solve a critical problem I observed across various industries: the overwhelming amount of
+                            manual work required to acquire clients and customers.</p>
+                        <p>After working with diverse businesses including e-commerce brands, coaches, consultants,
+                            local businesses,
+                            international companies, restaurants, and personal brands, I noticed a pattern. Despite
+                            having
+                            excellent products and services, most were struggling with inconsistent lead flow, manual
+                            follow-up processes, and a lack of systematic approach to client acquisition.</p>
+                        <p>This led me to develop the AI Client Acquisition System™ — a comprehensive framework that
+                            leverages artificial intelligence, automation, and strategic marketing to create predictable
+                            customer flow without the manual effort.</p>
+                        <p>Today, Zentrix Media works with businesses across multiple sectors who are ready to scale
+                            through intelligent systems rather than manual effort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section fade-in">
+            <div class="container">
+                <div class="mission-content">
+                    <h2>Our Mission</h2>
+                    <p>At Zentrix Media, our mission is to help businesses scale globally through intelligent marketing
+                        systems that create predictable client flow without the manual effort.</p>
+                    <p>We believe that businesses should focus on what they do best — delivering exceptional products
+                        and services —
+                        while their marketing systems work automatically in the background to bring in qualified
+                        prospects.</p>
+                    <p>By combining AI technology, strategic marketing, and automation, we're creating a new standard
+                        for how businesses across e-commerce, coaching, local services, international brands,
+                        restaurants, and personal branding
+                        acquire clients in the digital age.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section fade-in">
+            <div class="container">
+                <div class="values-header">
+                    <h2>Our Core Values</h2>
+                    <p>These principles guide everything we do at Zentrix Media.</p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Measurable Results</h3>
+                        <p>We believe marketing should be measurable. Every strategy we implement is designed to produce
+                            clear, trackable results that directly impact your bottom line.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Intelligent Automation</h3>
+                        <p>We leverage AI and automation to eliminate manual work and create systems that scale without
+                            requiring more of your time or energy.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3>Scalable Systems</h3>
+                        <p>We build marketing infrastructure designed for long-term growth, not quick fixes. Our systems
+                            are built to scale as your business grows.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Strategic Partnership</h3>
+                        <p>We work as an extension of your team, providing not just implementation but strategic
+                            guidance to help you achieve your business goals.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Continuous Innovation</h3>
+                        <p>We stay at the forefront of marketing technology and AI advancements to ensure our clients
+                            always have access to the most effective solutions.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Ethical Marketing</h3>
+                        <p>We believe in marketing that creates genuine value. Our strategies focus on connecting the
+                            right clients with the right coaches through authentic messaging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About CTA -->
+        <section class="about-cta fade-in">
+            <div class="container">
+                <h2>Ready to Work With Us?</h2>
+                <p>We partner with growth-ready businesses who are serious about building long-term infrastructure.</p>
+                <p>Apply for a Private Strategy Consultation to discuss your custom implementation.</p>
+                <a href="book-call.html" class="btn primary">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Zentrix <span>Media</span></div>
+                    <p>Zentrix Media is an AI-focused client acquisition firm helping businesses implement scalable
+                        marketing infrastructure designed for predictable revenue growth across e-commerce, coaching,
+                        local services,
+                        international brands, restaurants, and personal branding.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="our-system.html">Our System</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html#ai">AI Infrastructure</a></li>
+                        <li><a href="solutions.html#ads">Performance Advertising</a></li>
+                        <li><a href="solutions.html#conversion">Conversion Engineering</a></li>
+                        <li><a href="solutions.html#automation">Revenue Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="book-call.html">Book a Call</a></li>
+                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank"
+                                rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zentrix Media. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> |
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923035548888" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

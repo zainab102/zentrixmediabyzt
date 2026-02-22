@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Zentrix AI Client Acquisition System - Zentrix Media</title>
+    <meta name="description"
+        content="Explore our 4-layer marketing architecture designed to move prospects from cold traffic to qualified booked calls — seamlessly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .system-page-hero {
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            padding: 10rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(198, 167, 94, 0.1), transparent 70%);
+        }
+
+        .system-page-hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .system-layer {
+            padding: 6rem 0;
+        }
+
+        .system-layer:nth-child(odd) {
+            background-color: var(--bg-primary);
+        }
+
+        .system-layer:nth-child(even) {
+            background-color: var(--bg-secondary);
+        }
+
+        .layer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .layer-visual {
+            position: relative;
+            height: 400px;
+            background-color: rgba(198, 167, 94, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .layer-visual img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .layer-number {
+            font-size: 6rem;
+            font-weight: 700;
+            color: rgba(198, 167, 94, 0.2);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .layer-benefits {
+            margin-top: 2rem;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .system-cta {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent 70%);
+        }
+
+        .system-cta .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        @media (max-width: 768px) {
+            .layer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .layer-visual {
+                height: 300px;
+                order: 2;
+            }
+
+            .layer-info {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-nav">
+        <div class="container">
+            <div class="logo">Zentrix <span>Media</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our-system.html">The System</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="book-call.html" class="cta-btn">Apply</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="system-page-hero fade-in">
+            <div class="container">
+                <h1>The Zentrix AI Client Acquisition System™</h1>
+                <p>A 4-layer marketing architecture designed to move prospects from cold traffic to qualified booked
+                    calls — seamlessly.</p>
+            </div>
+        </section>
+
+        <!-- Layer 1: Acquisition -->
+        <section class="system-layer fade-in">
+            <div class="container">
+                <div class="layer-content">
+                    <div class="layer-info">
+                        <div class="layer-number">01</div>
+                        <h2>Acquisition Layer</h2>
+                        <p>Strategic Meta Ads campaigns designed to attract qualified prospects — not just clicks.</p>
+
+                        <div class="layer-benefits">
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Targeted Audience Segmentation</h3>
+                                    <p>Precision targeting based on psychographic and behavioral data to reach ideal
+                                        clients.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Multi-Variant Creative Testing</h3>
+                                    <p>Systematic testing of ad creative, copy, and angles to identify winning
+                                        combinations.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Algorithmic Optimization</h3>
+                                    <p>AI-driven campaign optimization that continuously improves performance over time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer-visual">
+                        <img src="https://static.coupler.io/templates/facebook-ads-dashboard-template.png" alt="Facebook ads performance dashboard" loading="lazy" decoding="async"
+                            alt="Meta Ads Dashboard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layer 2: Conversion -->
+        <section class="system-layer fade-in">
+            <div class="container">
+                <div class="layer-content">
+                    <div class="layer-visual">
+                        <img src="https://cdn.prod.website-files.com/5b5729421aca332c60585f78/641391de8062bf9272217b00_landing-page-funnels.webp" alt="Landing page funnel structure" loading="lazy" decoding="async"
+                            alt="Conversion Funnel">
+                    </div>
+                    <div class="layer-info">
+                        <div class="layer-number">02</div>
+                        <h2>Conversion Layer</h2>
+                        <p>High-converting landing architecture engineered to increase booked call rates.</p>
+
+                        <div class="layer-benefits">
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Psychological Trigger Mapping</h3>
+                                    <p>Strategic placement of decision triggers that guide prospects toward booking a
+                                        call.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Frictionless Booking Flow</h3>
+                                    <p>Streamlined path to consultation with minimal steps and maximum clarity.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Conversion Rate Optimization</h3>
+                                    <p>Continuous A/B testing and refinement to maximize landing page performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layer 3: Automation -->
+        <section class="system-layer fade-in">
+            <div class="container">
+                <div class="layer-content">
+                    <div class="layer-info">
+                        <div class="layer-number">03</div>
+                        <h2>Automation Layer</h2>
+                        <p>CRM systems, WhatsApp flows, and email sequences that nurture, qualify, and follow up
+                            automatically.</p>
+
+                        <div class="layer-benefits">
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Intelligent Lead Qualification</h3>
+                                    <p>Automated scoring and segmentation to prioritize high-value prospects.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Multi-Channel Nurture Sequences</h3>
+                                    <p>Coordinated messaging across email, WhatsApp, and SMS to maintain engagement.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Behavioral Response Triggers</h3>
+                                    <p>Automated workflows that adapt based on prospect engagement and actions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer-visual">
+                        <img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04073133/crm3.png" alt="CRM pipeline dashboard" loading="lazy" decoding="async"
+                            alt="CRM Automation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layer 4: Optimization -->
+        <section class="system-layer fade-in">
+            <div class="container">
+                <div class="layer-content">
+                    <div class="layer-visual">
+                        <img src="https://a.storyblok.com/f/47007/2400x1260/4cb21c7e8d/glossaryretargeting_v03.png/m/2880x0/filters%3Aquality%2880%29" alt="Retargeting campaign flow" loading="lazy" decoding="async"
+                            alt="Optimization Dashboard">
+                    </div>
+                    <div class="layer-info">
+                        <div class="layer-number">04</div>
+                        <h2>Optimization Layer</h2>
+                        <p>Data-driven scaling frameworks to continuously improve conversion and cost efficiency.</p>
+
+                        <div class="layer-benefits">
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Performance Analytics Dashboard</h3>
+                                    <p>Comprehensive metrics tracking from first click to closed client.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Conversion Leak Detection</h3>
+                                    <p>Systematic identification and repair of drop-off points in the acquisition
+                                        funnel.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="benefit-text">
+                                    <h3>Scaling Framework</h3>
+                                    <p>Methodical process for increasing ad spend while maintaining or improving ROI.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System CTA -->
+        <section class="system-cta fade-in">
+            <div class="container">
+                <h2>Ready to Implement Your AI Client Acquisition System?</h2>
+                <p>We partner with growth-ready coaches who are serious about building long-term infrastructure.</p>
+                <p>Apply for a Private Strategy Consultation to discuss your custom implementation.</p>
+                <a href="book-call.html" class="btn primary">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Zentrix <span>Media</span></div>
+                    <p>Zentrix Media is an AI-focused client acquisition firm helping coaches implement scalable
+                        marketing infrastructure designed for predictable revenue growth.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="our-system.html">Our System</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html#ai">AI Infrastructure</a></li>
+                        <li><a href="solutions.html#ads">Performance Advertising</a></li>
+                        <li><a href="solutions.html#conversion">Conversion Engineering</a></li>
+                        <li><a href="solutions.html#automation">Revenue Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="book-call.html">Book a Call</a></li>
+                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank"
+                                rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zentrix Media. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> |
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923035548888" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
