@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const formsEndpoint = 'https://formsubmit.co/ajax/zentrixmediabyzt@gmail.com';
+    const defaultFormsEndpoint = 'https://formspree.io/f/xaqdlwan';
 
     const trackFormEvent = (formName) => {
         if (Array.isArray(window.dataLayer)) {
@@ -72,11 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const payload = new FormData(form);
                 payload.set('_subject', form.getAttribute('data-subject') || 'New Website Submission');
-                payload.set('_template', 'table');
-                payload.set('_captcha', 'false');
+                const endpoint = form.getAttribute('action') || defaultFormsEndpoint;
 
                 try {
-                    const response = await fetch(formsEndpoint, {
+                    const response = await fetch(endpoint, {
                         method: 'POST',
                         body: payload,
                         headers: {

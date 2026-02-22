@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zentrixmedia.com/sitemap.xml
+Sitemap: https://zentrixmediabyzt.vercel.app/sitemap.xml
