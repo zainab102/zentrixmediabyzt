@@ -27,7 +27,7 @@
 - [x] Implemented key features:
   - [x] Sticky navigation with logo and highlighted CTA
   - [x] Floating WhatsApp button
-  - [x] Calendly embed in book-call.html
+  - [x] Booking flow via qualification form and WhatsApp
   - [x] Lead magnet section with form
   - [x] Social proof elements
   - [x] Mobile-responsive design

@@ -733,21 +733,6 @@ a:focus-visible {
     text-align: center;
 }
 
-.calendly-section {
-    text-align: center;
-}
-
-.calendly-section h2 {
-    margin-bottom: 1.5rem;
-}
-
-.calendly-container {
-    margin-top: 2rem;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(198, 167, 94, 0.2);
-}
-
 /* ===== Footer ===== */
 footer {
     background-color: var(--bg-secondary);
