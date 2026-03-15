@@ -120,9 +120,13 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const initializeHeadingUnderlines = () => {
-        const headings = document.querySelectorAll('h2:not(.no-underline)');
+        const headings = document.querySelectorAll('[data-heading-underline="true"]');
+        if (!headings.length) return;
 
         headings.forEach((heading) => {
+            if (heading.dataset.underlineEnhanced === 'true') return;
+            heading.dataset.underlineEnhanced = 'true';
+
             const span = document.createElement('span');
             while (heading.firstChild) {
                 span.appendChild(heading.firstChild);
@@ -715,6 +719,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.body.appendChild(floatingCTA);
         document.body.classList.add('has-floating-cta');
+
+        const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+        const updateFloatingVisibility = () => {
+            if (!mobileQuery.matches) {
+                floatingCTA.classList.remove('is-mobile-hidden');
+                return;
+            }
+
+            const revealPoint = Math.max(280, Math.round(window.innerHeight * 0.55));
+            floatingCTA.classList.toggle('is-mobile-hidden', window.scrollY < revealPoint);
+        };
+
+        updateFloatingVisibility();
+        window.addEventListener('scroll', updateFloatingVisibility, { passive: true });
+        window.addEventListener('resize', updateFloatingVisibility);
     };
 
     const initializeMarquee = () => {

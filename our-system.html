@@ -35,137 +35,227 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .system-page-hero {
-            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
-            padding: 10rem 0 6rem;
+        .page-our-system .system-page-hero {
+            background:
+                radial-gradient(circle at 16% 18%, rgba(59, 130, 246, 0.16), transparent 26%),
+                radial-gradient(circle at 84% 24%, rgba(139, 92, 246, 0.14), transparent 28%),
+                linear-gradient(180deg, rgba(10, 17, 31, 0.94) 0%, rgba(8, 13, 24, 0.98) 100%);
+            padding: 9.5rem 0 5.25rem;
             position: relative;
             overflow: hidden;
         }
 
-        .system-page-hero::before {
+        .page-our-system .system-page-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(198, 167, 94, 0.1), transparent 70%);
+            background-image:
+                linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+            background-size: 120px 120px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 88%);
         }
 
-        .system-page-hero .container {
+        .page-our-system .system-page-hero .container {
             position: relative;
             z-index: 2;
             text-align: center;
-            max-width: 900px;
+            max-width: 980px;
         }
 
-        .system-layer {
-            padding: 6rem 0;
+        .page-our-system .system-page-hero h1 {
+            max-width: 14ch;
+            margin: 0 auto 1.15rem;
+            font-size: clamp(3rem, 5vw, 4.25rem);
+            line-height: 1.04;
+            letter-spacing: -0.05em;
         }
 
-        .system-layer:nth-child(odd) {
-            background-color: var(--bg-primary);
+        .page-our-system .system-page-hero p {
+            max-width: 42rem;
+            margin: 0 auto;
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: rgba(226, 232, 240, 0.8);
         }
 
-        .system-layer:nth-child(even) {
-            background-color: var(--bg-secondary);
+        .page-our-system .system-layer {
+            padding: 5.2rem 0;
         }
 
-        .layer-content {
+        .page-our-system .system-layer:nth-child(odd) {
+            background: rgba(8, 14, 26, 0.86);
+        }
+
+        .page-our-system .system-layer:nth-child(even) {
+            background: rgba(10, 16, 29, 0.92);
+        }
+
+        .page-our-system .layer-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.96fr);
+            gap: 2.2rem;
             align-items: center;
         }
 
-        .layer-visual {
+        .page-our-system .layer-info {
+            min-width: 0;
+        }
+
+        .page-our-system .layer-info h2,
+        .page-our-system .system-cta h2 {
+            margin-bottom: 1rem;
+            font-size: clamp(2rem, 3vw, 2.75rem);
+            line-height: 1.08;
+        }
+
+        .page-our-system .layer-visual {
             position: relative;
-            height: 400px;
-            background-color: rgba(198, 167, 94, 0.05);
-            border-radius: 8px;
+            min-height: 340px;
+            padding: 1rem;
+            border-radius: 30px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            background: linear-gradient(180deg, rgba(14, 22, 38, 0.92) 0%, rgba(7, 12, 24, 0.94) 100%);
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 24px 60px rgba(2, 6, 23, 0.28);
         }
 
-        .layer-visual img {
+        .page-our-system .layer-visual img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
+            border-radius: 20px;
         }
 
-        .layer-number {
-            font-size: 6rem;
+        .page-our-system .layer-number {
+            font-size: clamp(4rem, 8vw, 6rem);
             font-weight: 700;
-            color: rgba(198, 167, 94, 0.2);
-            margin-bottom: 1rem;
+            color: rgba(96, 165, 250, 0.18);
+            margin-bottom: 0.8rem;
             line-height: 1;
         }
 
-        .layer-benefits {
+        .page-our-system .layer-benefits {
             margin-top: 2rem;
         }
 
-        .benefit {
+        .page-our-system .benefit {
             display: flex;
             align-items: flex-start;
             margin-bottom: 1.5rem;
         }
 
-        .benefit-icon {
-            color: var(--accent-gold);
+        .page-our-system .benefit-icon {
+            color: #60a5fa;
             font-size: 1.2rem;
             margin-right: 1rem;
             margin-top: 0.2rem;
         }
 
-        .system-cta {
-            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+        .page-our-system .benefit-text h3 {
+            font-size: 1.12rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .page-our-system .benefit-text p,
+        .page-our-system .layer-info>p,
+        .page-our-system .system-cta p {
+            color: rgba(226, 232, 240, 0.8);
+        }
+
+        .page-our-system .benefit-text p {
+            margin-bottom: 0;
+        }
+
+        .page-our-system .system-cta {
+            background:
+                radial-gradient(circle at 18% 22%, rgba(59, 130, 246, 0.12), transparent 20%),
+                linear-gradient(180deg, rgba(9, 15, 26, 0.96), rgba(7, 12, 24, 0.98));
             padding: 6rem 0;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .system-cta::before {
+        .page-our-system .system-cta::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent 70%);
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.12), transparent 70%);
         }
 
-        .system-cta .container {
+        .page-our-system .system-cta .container {
             position: relative;
             z-index: 2;
             max-width: 800px;
         }
 
         @media (max-width: 768px) {
-            .layer-content {
+            .page-our-system .system-page-hero {
+                padding: 11rem 0 4rem;
+            }
+
+            .page-our-system .system-page-hero .container {
+                text-align: left;
+            }
+
+            .page-our-system .system-page-hero h1 {
+                margin: 0 0 1rem;
+                max-width: 12ch;
+                font-size: clamp(1.95rem, 8.2vw, 2.55rem);
+            }
+
+            .page-our-system .system-page-hero p {
+                margin: 0;
+                max-width: none;
+                font-size: 1rem;
+                line-height: 1.68;
+            }
+
+            .page-our-system .layer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .layer-visual {
-                height: 300px;
+            .page-our-system .layer-visual {
+                min-height: 260px;
                 order: 2;
             }
 
-            .layer-info {
+            .page-our-system .layer-info {
                 order: 1;
+            }
+
+            .page-our-system .system-layer {
+                padding: 4.2rem 0;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page-our-system .layer-number {
+                font-size: 3.6rem;
+            }
+
+            .page-our-system .layer-info h2,
+            .page-our-system .system-cta h2 {
+                font-size: 1.95rem;
             }
         }
     </style>
 </head>
 
-<body class="agency-page">
+<body class="agency-page page-our-system">
     <header class="sticky-nav">
         <div class="container">
             <div class="logo">Zentrix <span>Media</span></div>
@@ -186,7 +276,7 @@
         <!-- Hero Section -->
         <section class="system-page-hero fade-in">
             <div class="container">
-                <h1>The Zentrix AI Client Acquisition System™</h1>
+                <h1>AI Client Acquisition System™</h1>
                 <p>A 4-layer marketing architecture designed to move prospects from cold traffic to qualified booked
                     calls — seamlessly.</p>
             </div>

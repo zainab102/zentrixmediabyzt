@@ -3580,11 +3580,16 @@ footer {
     backdrop-filter: blur(16px);
     color: #ffffff;
     max-width: calc(100vw - 2rem);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
 }
 
 body.has-floating-cta main {
     padding-bottom: calc(8rem + env(safe-area-inset-bottom, 0px));
+}
+
+.floating-strategy-cta.is-mobile-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .floating-strategy-cta:hover {
@@ -3878,6 +3883,10 @@ body.has-floating-cta main {
 
     .floating-strategy-cta:hover {
         transform: translateY(-4px);
+    }
+
+    .floating-strategy-cta.is-mobile-hidden {
+        transform: translateY(20px);
     }
 
     body.has-floating-cta main {
