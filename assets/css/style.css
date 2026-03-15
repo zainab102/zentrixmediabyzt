@@ -4850,6 +4850,77 @@ body.has-floating-cta main {
     font-size: 0.92rem;
 }
 
+.agency-page.legal-page .page-visual {
+    min-height: 100%;
+}
+
+.agency-page .legal-layout {
+    grid-template-columns: minmax(260px, 0.38fr) minmax(0, 0.62fr);
+    align-items: start;
+}
+
+.agency-page .legal-sidebar,
+.agency-page .legal-document {
+    display: grid;
+    gap: 1rem;
+}
+
+.agency-page .legal-sidebar {
+    position: sticky;
+    top: 6.8rem;
+}
+
+.agency-page .legal-nav {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.agency-page .legal-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.82rem 0.95rem;
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(226, 232, 240, 0.86);
+    font-size: 0.96rem;
+    font-weight: 600;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.agency-page .legal-nav a:hover {
+    transform: translateX(4px);
+    border-color: rgba(96, 165, 250, 0.28);
+    background: rgba(59, 130, 246, 0.1);
+    color: #ffffff;
+}
+
+.agency-page .legal-section {
+    display: grid;
+    gap: 1rem;
+}
+
+.agency-page .legal-section h2 {
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    line-height: 1.12;
+}
+
+.agency-page .legal-section h3 {
+    font-size: 1.08rem;
+    color: #bfdbfe;
+    margin-top: 0.2rem;
+}
+
+.agency-page .legal-section p,
+.agency-page .legal-section li {
+    color: rgba(226, 232, 240, 0.8);
+}
+
+.agency-page .legal-section p:last-child,
+.agency-page .legal-section ul:last-child {
+    margin-bottom: 0;
+}
+
 .agency-page.article-page .article-hero {
     padding: 9rem 0 2.4rem;
 }
@@ -4947,6 +5018,10 @@ body.has-floating-cta main {
     .agency-page .booking-layout,
     .agency-page .split-layout {
         grid-template-columns: 1fr;
+    }
+
+    .agency-page .legal-sidebar {
+        position: static;
     }
 
     .agency-page .service-panel {
