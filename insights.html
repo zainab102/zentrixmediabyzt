@@ -4,479 +4,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights - Zentrix Media</title>
+    <title>Insights on AI Marketing &amp; Client Acquisition | Zentrix Media</title>
     <meta name="description"
-        content="Explore our latest insights on AI marketing, funnel automation, Meta ads, and CRM automation for coaches and consultants.">
+        content="Explore strategies, systems, and insights on AI marketing, lead generation, conversion optimization, and growth strategy from Zentrix Media.">
     <link rel="canonical" href="https://zentrixmediabyzt.vercel.app/insights.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Zentrix Media">
-    <meta property="og:title" content="Insights - Zentrix Media">
+    <meta property="og:title" content="Insights on AI Marketing &amp; Client Acquisition | Zentrix Media">
     <meta property="og:description"
-        content="Explore our latest insights on AI marketing, funnel automation, Meta ads, and CRM automation for coaches and consultants.">
+        content="Strategies, systems and insights to help modern businesses grow with stronger client acquisition.">
     <meta property="og:url" content="https://zentrixmediabyzt.vercel.app/insights.html">
     <meta property="og:image" content="https://zentrixmediabyzt.vercel.app/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Insights - Zentrix Media">
+    <meta name="twitter:title" content="Insights on AI Marketing &amp; Client Acquisition | Zentrix Media">
     <meta name="twitter:description"
-        content="Explore our latest insights on AI marketing, funnel automation, Meta ads, and CRM automation for coaches and consultants.">
+        content="Strategies, systems and insights to help modern businesses grow with stronger client acquisition.">
     <meta name="twitter:image" content="https://zentrixmediabyzt.vercel.app/assets/images/og-image.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Insights - Zentrix Media",
+            "@type": "Blog",
+            "name": "Insights on AI Marketing & Client Acquisition | Zentrix Media",
             "url": "https://zentrixmediabyzt.vercel.app/insights.html",
-            "description": "Explore our latest insights on AI marketing, funnel automation, Meta ads, and CRM automation for coaches and consultants."
+            "description": "Strategies, systems and insights to help modern businesses grow with stronger client acquisition."
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .insights-hero {
-            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
-            padding: 10rem 0 6rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .insights-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(198, 167, 94, 0.1), transparent 70%);
-        }
-
-        .insights-hero .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        .insights-section {
-            padding: 6rem 0;
-            background-color: var(--bg-primary);
-        }
-
-        .insights-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .insights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .insight-card {
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(198, 167, 94, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .insight-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px var(--shadow-gold);
-            border-color: var(--accent-gold);
-        }
-
-        .insight-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .insight-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .insight-card:hover .insight-image img {
-            transform: scale(1.05);
-        }
-
-        .insight-content {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .insight-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .insight-category {
-            color: var(--accent-gold);
-            margin-right: 1rem;
-        }
-
-        .insight-date {
-            margin-left: auto;
-        }
-
-        .insight-content h3 {
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            transition: color 0.3s ease;
-        }
-
-        .insight-card:hover .insight-content h3 {
-            color: var(--accent-gold);
-        }
-
-        .insight-excerpt {
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .read-more {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            margin-top: auto;
-        }
-
-        .read-more i {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .read-more:hover i {
-            transform: translateX(5px);
-        }
-
-        .insights-cta {
-            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .insights-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent 70%);
-        }
-
-        .insights-cta .container {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
-        .newsletter-form {
-            margin-top: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .newsletter-form input {
-            flex-grow: 1;
-            padding: 1rem;
-            border: none;
-            border-radius: 4px 0 0 4px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
-            border: 1px solid rgba(198, 167, 94, 0.3);
-            border-right: none;
-        }
-
-        .newsletter-form button {
-            padding: 1rem 1.5rem;
-            background-color: var(--accent-gold);
-            color: var(--bg-primary);
-            border: none;
-            border-radius: 0 4px 4px 0;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .newsletter-form button:hover {
-            background-color: #d4b978;
-        }
-
-        .newsletter-form .form-status {
-            width: 100%;
-            margin-top: 0.75rem;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .insights-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-form input {
-                border-radius: 4px;
-                border-right: 1px solid rgba(198, 167, 94, 0.3);
-                margin-bottom: 1rem;
-            }
-
-            .newsletter-form button {
-                border-radius: 4px;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="agency-page">
     <header class="sticky-nav">
         <div class="container">
             <div class="logo">Zentrix <span>Media</span></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="our-system.html">The System</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="solutions.html">Services</a></li>
+                    <li><a href="case-studies.html">Approach</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="book-call.html" class="cta-btn">Apply</a></li>
+                    <li><a href="insights.html">Blog</a></li>
+                    <li><a href="book-call.html" class="cta-btn">Book a Strategy Call</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="insights-hero fade-in">
-            <div class="container">
-                <h1>Insights</h1>
-                <p>Explore our latest insights on AI marketing, funnel automation, Meta ads, and CRM automation for
-                    coaches and consultants.</p>
-            </div>
-        </section>
-
-        <!-- Featured Insights -->
-        <section class="insights-section fade-in">
-            <div class="container">
-                <div class="insights-header">
-                    <h2>Latest Articles</h2>
-                    <p>Practical strategies and insights to help you scale your coaching business.</p>
+        <section class="page-hero">
+            <div class="container page-hero-shell">
+                <div class="page-copy" data-reveal="up">
+                    <p class="page-kicker">Blog / Resources</p>
+                    <h1>Insights on AI Marketing &amp; Client Acquisition</h1>
+                    <p>Strategies, systems and insights to help modern businesses grow.</p>
+                    <div class="category-row">
+                        <span class="category-pill">AI Marketing</span>
+                        <span class="category-pill">Lead Generation</span>
+                        <span class="category-pill">Conversion Optimization</span>
+                        <span class="category-pill">Marketing Automation</span>
+                        <span class="category-pill">Growth Strategy</span>
+                    </div>
                 </div>
-
-                <div class="insights-grid">
-                    <div class="insight-card">
-                        <div class="insight-image">
-                            <img src="https://cdn.dribbble.com/userupload/10930312/file/original-d302878497a200d7ff9d4b1d7facfcc9.jpg?crop=0x0-4800x3600&format=webp&resize=400x300&vertical=center" alt="AI automation workflow visualization" loading="lazy" decoding="async"
-                                alt="AI Chatbots">
-                        </div>
-                        <div class="insight-content">
-                            <div class="insight-meta">
-                                <span class="insight-category">AI Automation</span>
-                                <span class="insight-date">June 1, 2024</span>
-                            </div>
-                            <h3>How AI Chatbots Are Revolutionizing Lead Qualification for Coaches</h3>
-                            <p class="insight-excerpt">Learn how intelligent conversation systems can qualify leads and
-                                book calls 24/7, freeing up your time to focus on delivery.</p>
-                            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                <div class="panel-card page-visual" data-reveal="left">
+                    <div class="page-visual-content">
+                        <span class="visual-chip">Featured Topic</span>
+                        <h2>How modern brands turn more of their traffic into booked sales calls.</h2>
+                        <p>From AI lead qualification to cleaner landing-page architecture, these articles focus on the
+                            systems that improve pipeline quality.</p>
                     </div>
-
-                    <div class="insight-card">
-                        <div class="insight-image">
-                            <img src="https://static.coupler.io/templates/facebook-ads-dashboard-template.png" alt="Facebook ads performance dashboard" loading="lazy" decoding="async"
-                                alt="Meta Ads Strategy">
+                    <div class="visual-stat-grid">
+                        <div class="mini-card">
+                            <strong>6</strong>
+                            <span>Published resources</span>
                         </div>
-                        <div class="insight-content">
-                            <div class="insight-meta">
-                                <span class="insight-category">Performance Advertising</span>
-                                <span class="insight-date">May 25, 2024</span>
-                            </div>
-                            <h3>The Ultimate Meta Ads Framework for Coaching Businesses in 2024</h3>
-                            <p class="insight-excerpt">Discover the proven Meta Ads framework that's helping coaches
-                                generate qualified leads at scale without wasting ad spend.</p>
-                            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                        <div class="mini-card">
+                            <strong>5</strong>
+                            <span>Core categories</span>
                         </div>
-                    </div>
-
-                    <div class="insight-card">
-                        <div class="insight-image">
-                            <img src="https://cdn.prod.website-files.com/5b5729421aca332c60585f78/641391de8062bf9272217b00_landing-page-funnels.webp" alt="Landing page funnel structure" loading="lazy" decoding="async"
-                                alt="Funnel Optimization">
+                        <div class="mini-card">
+                            <strong>1</strong>
+                            <span>Goal: better client acquisition</span>
                         </div>
-                        <div class="insight-content">
-                            <div class="insight-meta">
-                                <span class="insight-category">Conversion Engineering</span>
-                                <span class="insight-date">May 18, 2024</span>
-                            </div>
-                            <h3>5 Psychological Triggers That Double Booking Rates on Coaching Landing Pages</h3>
-                            <p class="insight-excerpt">Learn the key psychological principles that can dramatically
-                                increase the conversion rate of your coaching landing pages.</p>
-                            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="insight-card">
-                        <div class="insight-image">
-                            <img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04073133/crm3.png" alt="CRM pipeline dashboard" loading="lazy" decoding="async"
-                                alt="CRM Setup">
-                        </div>
-                        <div class="insight-content">
-                            <div class="insight-meta">
-                                <span class="insight-category">Revenue Automation</span>
-                                <span class="insight-date">May 10, 2024</span>
-                            </div>
-                            <h3>The 7-Step CRM Setup That Eliminates Lead Leakage for Coaching Businesses</h3>
-                            <p class="insight-excerpt">Discover how to structure your CRM system to ensure no qualified
-                                lead falls through the cracks in your sales process.</p>
-                            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="insight-card">
-                        <div class="insight-image">
-                            <img src="https://htmlemail.io/img/post-automation/drip.png" alt="Email Automation">
-                        </div>
-                        <div class="insight-content">
-                            <div class="insight-meta">
-                                <span class="insight-category">AI Automation</span>
-                                <span class="insight-date">May 3, 2024</span>
-                            </div>
-                            <h3>AI-Powered Email Sequences: The New Standard for Coaching Businesses</h3>
-                            <p class="insight-excerpt">Learn how to leverage AI to create personalized, high-converting
-                                email sequences that nurture leads automatically.</p>
-                            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="insight-card">
-                        <div class="insight-image">
-                            <img src="https://a.storyblok.com/f/47007/2400x1260/4cb21c7e8d/glossaryretargeting_v03.png/m/2880x0/filters%3Aquality%2880%29" alt="Retargeting campaign flow" loading="lazy" decoding="async"
-                                alt="Retargeting Systems">
-                        </div>
-                        <div class="insight-content">
-                            <div class="insight-meta">
-                                <span class="insight-category">Performance Advertising</span>
-                                <span class="insight-date">April 26, 2024</span>
-                            </div>
-                            <h3>The 3-Layer Retargeting Architecture That Recaptures Lost Leads</h3>
-                            <p class="insight-excerpt">Discover the strategic retargeting framework that brings back 35%
-                                of prospects who initially didn't convert.</p>
-                            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                        <div class="mini-card">
+                            <strong>Fresh</strong>
+                            <span>Editorial SaaS-style layout</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter CTA -->
-        <section class="insights-cta fade-in">
+        <section>
             <div class="container">
-                <h2>Get AI Marketing Insights Delivered to Your Inbox</h2>
-                <p>Subscribe to our newsletter for exclusive strategies, case studies, and AI marketing tips for coaches
-                    and consultants.</p>
+                <a class="resource-card" href="insights/ai-chatbots-qualify-faster.html" data-reveal="up">
+                    <div class="split-layout" style="grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);">
+                        <div class="content-stack">
+                            <div class="resource-topline">
+                                <span class="article-chip">AI Marketing</span>
+                                <span>Featured Article</span>
+                            </div>
+                            <h2>How AI chatbots qualify leads faster without making the brand feel robotic.</h2>
+                            <p>What to automate, where human handoff should happen, and how to use qualification logic
+                                to protect sales time.</p>
+                            <div class="results-strip">
+                                <span class="result-pill"><strong>6 min</strong> read time</span>
+                                <span class="result-pill"><strong>Mar 2026</strong> published</span>
+                            </div>
+                            <span class="arrow-link">Read featured article</span>
+                        </div>
+                        <div class="resource-thumb">
+                            <span>AI<br>Qualify</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-                <form class="newsletter-form" data-ajax="true" data-form-name="newsletter_signup"
-                    data-subject="New Newsletter Subscription - Zentrix Media"
-                    action="https://formspree.io/f/xaqdlwan" method="post">
-                    <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off">
-                    <input type="email" name="email" placeholder="Enter your email address" required
-                        aria-label="Email address">
-                    <button type="submit">Subscribe</button>
-                    <p class="form-status" role="status" aria-live="polite"></p>
-                </form>
+        <section>
+            <div class="container">
+                <div class="section-heading" data-reveal="up">
+                    <p class="page-kicker">Latest Articles</p>
+                    <h2>Frameworks, breakdowns, and system notes for modern acquisition.</h2>
+                    <p>Each article includes a specific category, short excerpt, read time, and publish date so the
+                        page feels like a real resource hub instead of a placeholder blog.</p>
+                </div>
+                <div class="resources-grid">
+                    <a class="resource-card" href="insights/meta-ads-creative-framework.html" data-reveal="up">
+                        <div class="resource-thumb"><span>Meta<br>Creative</span></div>
+                        <div class="resource-meta">
+                            <div class="resource-topline">
+                                <span class="article-chip">Lead Generation</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h3>The Meta ads creative framework that pulls stronger lead quality.</h3>
+                            <p>A practical system for aligning scroll-stopping hooks, offer clarity, and conversion
+                                intent.</p>
+                            <span>Published: March 12, 2026</span>
+                            <span class="arrow-link">Read article</span>
+                        </div>
+                    </a>
 
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">By subscribing, you'll
-                    also receive our AI Funnel Blueprint for Coaches (2026 Edition).</p>
+                    <a class="resource-card" href="insights/landing-page-triggers-that-convert.html" data-reveal="up">
+                        <div class="resource-thumb"><span>Page<br>Triggers</span></div>
+                        <div class="resource-meta">
+                            <div class="resource-topline">
+                                <span class="article-chip">Conversion Optimization</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3>Landing-page triggers that increase intent before the booking step.</h3>
+                            <p>The hierarchy, proof structure, and CTA rhythm that move qualified visitors faster.</p>
+                            <span>Published: March 10, 2026</span>
+                            <span class="arrow-link">Read article</span>
+                        </div>
+                    </a>
+
+                    <a class="resource-card" href="insights/crm-setup-without-lead-leakage.html" data-reveal="up">
+                        <div class="resource-thumb"><span>CRM<br>Setup</span></div>
+                        <div class="resource-meta">
+                            <div class="resource-topline">
+                                <span class="article-chip">Marketing Automation</span>
+                                <span>7 min read</span>
+                            </div>
+                            <h3>CRM setup without lead leakage across sales and follow-up workflows.</h3>
+                            <p>How to structure pipelines, ownership, and automation so qualified leads do not stall.</p>
+                            <span>Published: March 8, 2026</span>
+                            <span class="arrow-link">Read article</span>
+                        </div>
+                    </a>
+
+                    <a class="resource-card" href="insights/email-sequences-without-sounding-automated.html" data-reveal="up">
+                        <div class="resource-thumb"><span>Email<br>Flow</span></div>
+                        <div class="resource-meta">
+                            <div class="resource-topline">
+                                <span class="article-chip">Marketing Automation</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h3>Email sequences that feel personal while still running on automation.</h3>
+                            <p>A structure for follow-up emails that keeps momentum without sounding templated or flat.</p>
+                            <span>Published: March 6, 2026</span>
+                            <span class="arrow-link">Read article</span>
+                        </div>
+                    </a>
+
+                    <a class="resource-card" href="insights/retargeting-architecture-for-modern-brands.html" data-reveal="up">
+                        <div class="resource-thumb"><span>Retargeting<br>Map</span></div>
+                        <div class="resource-meta">
+                            <div class="resource-topline">
+                                <span class="article-chip">Growth Strategy</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3>Retargeting architecture for modern brands that want more than generic reminders.</h3>
+                            <p>Use segmented messaging and audience intent to improve follow-up efficiency across the funnel.</p>
+                            <span>Published: March 4, 2026</span>
+                            <span class="arrow-link">Read article</span>
+                        </div>
+                    </a>
+
+                    <a class="resource-card" href="insights/ai-chatbots-qualify-faster.html" data-reveal="up">
+                        <div class="resource-thumb"><span>Lead<br>Logic</span></div>
+                        <div class="resource-meta">
+                            <div class="resource-topline">
+                                <span class="article-chip">AI Marketing</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3>AI chatbots that qualify faster and route better-fit leads to the right next step.</h3>
+                            <p>An AI-first approach to pre-qualification, expectation setting, and handoff timing.</p>
+                            <span>Published: March 2, 2026</span>
+                            <span class="arrow-link">Read article</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="split-layout">
+                    <div class="content-stack section-card" data-reveal="up">
+                        <span class="visual-chip">Use These Ideas</span>
+                        <h2>Good acquisition content should be immediately usable.</h2>
+                        <p>The goal of this resource hub is to make Zentrix feel credible to founders who want strategic
+                            depth, not recycled agency advice.</p>
+                        <ul>
+                            <li>Specific positioning and funnel insights</li>
+                            <li>Automation systems that protect lead quality</li>
+                            <li>Growth strategies built for premium offers</li>
+                            <li>Client acquisition thinking for service and SaaS brands</li>
+                        </ul>
+                    </div>
+                    <div class="application-form" data-reveal="left">
+                        <form data-ajax="true" data-form-name="newsletter_signup"
+                            data-subject="New Insights Subscriber - Zentrix Media"
+                            action="https://formspree.io/f/xaqdlwan" method="post">
+                            <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off">
+                            <p class="page-kicker">Get Updates</p>
+                            <h3>Get AI marketing insights delivered to your inbox.</h3>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="insight-name">Name</label>
+                                    <input type="text" id="insight-name" name="name" required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="insight-email">Email</label>
+                                    <input type="email" id="insight-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn primary">Subscribe</button>
+                                <p class="form-status" role="status" aria-live="polite"></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="saas-footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">Zentrix <span>Media</span></div>
-                    <p>Zentrix Media is an AI-focused client acquisition firm helping coaches implement scalable
-                        marketing infrastructure designed for predictable revenue growth.</p>
+                    <p>Founder-led AI client acquisition systems for coaches, consultants, SaaS founders, and online businesses.</p>
+                    <p class="footer-location">Based in Pakistan • Working with clients worldwide</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="our-system.html">Our System</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Solutions</h4>
+                <div class="footer-column">
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="solutions.html#ai">AI Infrastructure</a></li>
-                        <li><a href="solutions.html#ads">Performance Advertising</a></li>
-                        <li><a href="solutions.html#conversion">Conversion Engineering</a></li>
-                        <li><a href="solutions.html#automation">Revenue Automation</a></li>
+                        <li><a href="solutions.html#ai">AI Lead Generation</a></li>
+                        <li><a href="solutions.html#conversion">Conversion Funnels</a></li>
+                        <li><a href="solutions.html#automation">Marketing Automation</a></li>
+                        <li><a href="solutions.html#strategy">Growth Strategy</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
+                <div class="footer-column">
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="book-call.html">Book a Call</a></li>
-                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank"
-                                rel="noopener noreferrer">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank"
-                                rel="noopener noreferrer">Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank"
-                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="insights.html">Blog</a></li>
+                        <li><a href="case-studies.html">Approach</a></li>
+                        <li><a href="insights.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:zentrixmediabyzt@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://wa.me/923035548888" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="book-call.html">Book Strategy Call</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Zentrix Media. All rights reserved.</p>
+                <p>&copy; 2026 Zentrix Media by ZT. Registered in Pakistan.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms.html">Terms of Service</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923035548888" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script src="assets/js/script.js"></script>
 </body>

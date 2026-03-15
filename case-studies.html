@@ -4,437 +4,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies - Zentrix Media</title>
+    <title>Approach &amp; Breakdowns | Zentrix Media</title>
     <meta name="description"
-        content="Explore our client success stories. See how we've helped coaches and consultants implement AI-powered client acquisition systems.">
+        content="Explore how Zentrix Media thinks about AI client acquisition systems across SaaS, coaching, and consulting business models.">
     <link rel="canonical" href="https://zentrixmediabyzt.vercel.app/case-studies.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Zentrix Media">
-    <meta property="og:title" content="Case Studies - Zentrix Media">
+    <meta property="og:title" content="Approach &amp; Breakdowns | Zentrix Media">
     <meta property="og:description"
-        content="Explore our client success stories. See how we've helped coaches and consultants implement AI-powered client acquisition systems.">
+        content="Strategic breakdowns showing how Zentrix approaches positioning, funnels, automation, and lead flow.">
     <meta property="og:url" content="https://zentrixmediabyzt.vercel.app/case-studies.html">
     <meta property="og:image" content="https://zentrixmediabyzt.vercel.app/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Case Studies - Zentrix Media">
+    <meta name="twitter:title" content="Approach &amp; Breakdowns | Zentrix Media">
     <meta name="twitter:description"
-        content="Explore our client success stories. See how we've helped coaches and consultants implement AI-powered client acquisition systems.">
+        content="Strategic breakdowns showing how Zentrix approaches positioning, funnels, automation, and lead flow.">
     <meta name="twitter:image" content="https://zentrixmediabyzt.vercel.app/assets/images/og-image.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Case Studies - Zentrix Media",
+            "name": "Approach & Breakdowns | Zentrix Media",
             "url": "https://zentrixmediabyzt.vercel.app/case-studies.html",
-            "description": "Explore our client success stories. See how we've helped coaches and consultants implement AI-powered client acquisition systems."
+            "description": "Explore how Zentrix Media thinks about AI client acquisition systems across SaaS, coaching, and consulting business models."
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .case-studies-hero {
-            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
-            padding: 10rem 0 6rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .case-studies-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(198, 167, 94, 0.1), transparent 70%);
-        }
-
-        .case-studies-hero .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        .featured-case {
-            padding: 6rem 0;
-            background-color: var(--bg-primary);
-        }
-
-        .case-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .case-study-card {
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(198, 167, 94, 0.2);
-            margin-bottom: 4rem;
-        }
-
-        .case-study-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 0;
-        }
-
-        .case-metrics {
-            padding: 3rem;
-            background: linear-gradient(135deg, var(--bg-secondary), rgba(17, 24, 39, 0.9));
-            position: relative;
-        }
-
-        .case-metrics::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(198, 167, 94, 0.05));
-        }
-
-        .metric {
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .metric-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-        }
-
-        .case-content {
-            padding: 3rem;
-        }
-
-        .case-content h3 {
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .case-content h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .case-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .case-content ul {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .case-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        .case-gallery {
-            margin-top: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            height: 150px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .case-studies-cta {
-            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .case-studies-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent 70%);
-        }
-
-        .case-studies-cta .container {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
-        .testimonial {
-            background-color: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-gold);
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .testimonial::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-size: 4rem;
-            color: var(--accent-gold);
-            font-family: 'Georgia', serif;
-            opacity: 0.5;
-        }
-
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--accent-gold);
-        }
-
-        @media (max-width: 768px) {
-            .case-study-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .case-metrics,
-            .case-content {
-                padding: 2rem;
-            }
-
-            .metric-value {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="agency-page">
     <header class="sticky-nav">
         <div class="container">
             <div class="logo">Zentrix <span>Media</span></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="our-system.html">The System</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="solutions.html">Services</a></li>
+                    <li><a href="case-studies.html">Approach</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="book-call.html" class="cta-btn">Apply</a></li>
+                    <li><a href="insights.html">Blog</a></li>
+                    <li><a href="book-call.html" class="cta-btn">Book a Strategy Call</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="case-studies-hero fade-in">
-            <div class="container">
-                <h1>Case Studies</h1>
-                <p>Explore how we've helped coaches and consultants implement AI-powered client acquisition systems that
-                    deliver predictable results.</p>
-            </div>
-        </section>
-
-        <!-- Featured Case Study -->
-        <section class="featured-case fade-in">
-            <div class="container">
-                <div class="case-header">
-                    <h2>From 5 to 15 Booked Calls Per Week</h2>
-                    <p>How we helped an international coaching brand triple their booked calls and reduce manual work by
-                        80%.</p>
+        <section class="page-hero">
+            <div class="container page-hero-shell">
+                <div class="page-copy" data-reveal="up">
+                    <p class="page-kicker">Approach</p>
+                    <h1>Approach &amp; Breakdowns</h1>
+                    <p>A closer look at how Zentrix would structure AI client acquisition systems for different business models.</p>
+                    <div class="page-actions">
+                        <a href="book-call.html" class="btn primary">Book a Strategy Call</a>
+                        <a href="solutions.html" class="btn secondary">Explore Services</a>
+                    </div>
                 </div>
-
-                <div class="case-study-card">
-                    <div class="case-study-grid">
-                        <div class="case-metrics">
-                            <div class="metric">
-                                <div class="metric-value">3X</div>
-                                <p>increase in booked calls</p>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">40%</div>
-                                <p>close rate on calls</p>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">80%</div>
-                                <p>reduction in manual work</p>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">2.1X</div>
-                                <p>return on ad spend</p>
-                            </div>
+                <div class="panel-card page-visual node-diagram" data-node-color="rgba(96,165,250,0.92)"
+                    data-connection-color="rgba(139,92,246,0.2)" data-node-count="14" data-reveal="left"
+                    aria-hidden="true">
+                    <div class="page-visual-content">
+                        <span class="visual-chip">How Zentrix Thinks</span>
+                        <h2>These are strategic breakdowns, not public client case studies.</h2>
+                        <p>They show how Zentrix approaches positioning, funnel design, automation, and lead quality
+                            while the agency is still in its early stage.</p>
+                    </div>
+                    <div class="visual-stat-grid">
+                        <div class="mini-card">
+                            <strong>SaaS</strong>
+                            <span>Demo-led funnel thinking</span>
                         </div>
-                        <div class="case-content">
-                            <h3>International Coaching Brand</h3>
-
-                            <h4>The Challenge</h4>
-                            <p>This established coaching business was struggling with inconsistent lead flow and an
-                                overwhelming amount of manual follow-up work. Despite running ads, they were only
-                                booking 5 calls per week, with team members spending hours manually qualifying leads and
-                                sending follow-up messages.</p>
-
-                            <h4>Key Issues Identified</h4>
-                            <ul>
-                                <li>No structured CRM system or lead tracking</li>
-                                <li>Manual Instagram DM follow-ups taking 3+ hours daily</li>
-                                <li>Ad campaigns running without proper retargeting structure</li>
-                                <li>No automated qualification process</li>
-                                <li>Inconsistent messaging across touchpoints</li>
-                            </ul>
-
-                            <h4>Our Solution</h4>
-                            <p>We implemented a complete AI Client Acquisition System with four integrated layers:</p>
-
-                            <ol>
-                                <li><strong>Acquisition Layer:</strong> Restructured Meta Ads with proper audience
-                                    segmentation and retargeting flows</li>
-                                <li><strong>Conversion Layer:</strong> Developed high-converting landing pages with
-                                    clear call-to-action paths</li>
-                                <li><strong>Automation Layer:</strong> Implemented CRM with automated WhatsApp and email
-                                    follow-up sequences</li>
-                                <li><strong>Optimization Layer:</strong> Created performance dashboard with key metrics
-                                    tracking</li>
-                            </ol>
-
-                            <h4>The Results</h4>
-                            <p>Within 60 days of implementation, the client saw:</p>
-                            <ul>
-                                <li>Increase from 5 to 15 booked calls per week</li>
-                                <li>40% close rate on qualified calls (up from 25%)</li>
-                                <li>80% reduction in manual follow-up work</li>
-                                <li>2.1X return on ad spend</li>
-                                <li>Complete visibility into the sales pipeline</li>
-                            </ul>
-
-                            <div class="testimonial">
-                                <p class="testimonial-content">"The systems Zentrix Media built for us completely
-                                    transformed our business. We're booking more calls with less effort, and our team
-                                    can focus on delivery instead of chasing leads. The automation has been a
-                                    game-changer."</p>
-                                <p class="testimonial-author">— Client, International Coaching Brand</p>
-                            </div>
-
-                            <div class="case-gallery">
-                                <div class="gallery-item">
-                                    <img src="https://static.coupler.io/templates/facebook-ads-dashboard-template.png" alt="Facebook ads performance dashboard" loading="lazy" decoding="async"
-                                        alt="Ads Dashboard">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04073133/crm3.png" alt="CRM pipeline dashboard" loading="lazy" decoding="async"
-                                        alt="CRM Setup">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="https://htmlemail.io/img/post-automation/drip.png" alt="Email Automation">
-                                </div>
-                            </div>
+                        <div class="mini-card">
+                            <strong>Coach</strong>
+                            <span>Offer journey structure</span>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Consulting</strong>
+                            <span>Lead routing and CRM flow</span>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Remote</strong>
+                            <span>Global founder-led delivery</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Additional Case Studies Placeholder -->
-                <div class="case-header">
-                    <h2>More Success Stories Coming Soon</h2>
-                    <p>We're currently working with several clients to document their success stories. Check back soon
-                        for more case studies.</p>
+        <section>
+            <div class="container">
+                <div class="section-heading" data-reveal="up">
+                    <p class="page-kicker">Breakdowns</p>
+                    <h2>System examples for common business models.</h2>
+                    <p>Open each breakdown to see the business context, the likely acquisition bottleneck, and how
+                        Zentrix would structure the system response.</p>
+                </div>
+                <div class="case-index-grid">
+                    <a class="case-card" href="case-studies/saas-founder-pipeline-acceleration.html" data-reveal="up">
+                        <div class="case-topline">
+                            <span class="article-chip">SaaS Breakdown</span>
+                            <span>Inbound + Demo Funnel</span>
+                        </div>
+                        <h3>How Zentrix would structure a B2B SaaS demo funnel for better qualification and booking intent.</h3>
+                        <div class="case-meta">
+                            <div class="overview-card">
+                                <strong>Focus</strong>
+                                <span>Demo-led acquisition</span>
+                            </div>
+                            <div class="overview-card">
+                                <strong>Stage</strong>
+                                <span>Founder-led software team</span>
+                            </div>
+                            <div class="overview-card">
+                                <strong>Goal</strong>
+                                <span>Higher intent before demos</span>
+                            </div>
+                        </div>
+                        <div class="results-strip">
+                            <span class="result-pill"><strong>Positioning</strong> clearer ICP and offer framing</span>
+                            <span class="result-pill"><strong>Routing</strong> better qualification before booking</span>
+                        </div>
+                        <span class="arrow-link">View breakdown</span>
+                    </a>
+
+                    <a class="case-card" href="case-studies/coaching-brand-call-engine.html" data-reveal="up">
+                        <div class="case-topline">
+                            <span class="article-chip">Coaching Breakdown</span>
+                            <span>Offer Funnel + Follow-up</span>
+                        </div>
+                        <h3>How Zentrix would turn a premium coaching offer into a cleaner booking journey and follow-up system.</h3>
+                        <div class="case-meta">
+                            <div class="overview-card">
+                                <strong>Focus</strong>
+                                <span>Offer page and call flow</span>
+                            </div>
+                            <div class="overview-card">
+                                <strong>Stage</strong>
+                                <span>Expert-led brand</span>
+                            </div>
+                            <div class="overview-card">
+                                <strong>Goal</strong>
+                                <span>Less friction before inquiry</span>
+                            </div>
+                        </div>
+                        <div class="results-strip">
+                            <span class="result-pill"><strong>Funnels</strong> one clear conversion path</span>
+                            <span class="result-pill"><strong>Follow-up</strong> WhatsApp and email momentum</span>
+                        </div>
+                        <span class="arrow-link">View breakdown</span>
+                    </a>
+
+                    <a class="case-card" href="case-studies/consulting-brand-funnel-rebuild.html" data-reveal="up">
+                        <div class="case-topline">
+                            <span class="article-chip">Consulting Breakdown</span>
+                            <span>Traffic + CRM System</span>
+                        </div>
+                        <h3>How Zentrix would sharpen positioning, routing, and CRM movement for a consulting pipeline.</h3>
+                        <div class="case-meta">
+                            <div class="overview-card">
+                                <strong>Focus</strong>
+                                <span>Lead routing and prioritization</span>
+                            </div>
+                            <div class="overview-card">
+                                <strong>Stage</strong>
+                                <span>Founder with lean support</span>
+                            </div>
+                            <div class="overview-card">
+                                <strong>Goal</strong>
+                                <span>Cleaner pipeline visibility</span>
+                            </div>
+                        </div>
+                        <div class="results-strip">
+                            <span class="result-pill"><strong>CRM</strong> stronger lead movement</span>
+                            <span class="result-pill"><strong>Positioning</strong> clearer demand capture</span>
+                        </div>
+                        <span class="arrow-link">View breakdown</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Case Studies CTA -->
-        <section class="case-studies-cta fade-in">
+        <section>
             <div class="container">
-                <h2>Ready to Become Our Next Success Story?</h2>
-                <p>We partner with growth-ready coaches who are serious about building long-term infrastructure.</p>
-                <p>Apply for a Private Strategy Consultation to discuss your custom implementation.</p>
-                <a href="book-call.html" class="btn primary">Apply Now</a>
+                <div class="split-layout">
+                    <div class="content-stack section-card" data-reveal="up">
+                        <span class="visual-chip">What These Show</span>
+                        <h2>The point is clarity, not inflated proof.</h2>
+                        <p>Whether the business sells software, advisory offers, or consulting, the pattern is
+                            similar: clarify positioning, improve the conversion path, automate lead handling, and
+                            tighten the feedback loop.</p>
+                        <ul>
+                            <li>Show the process before public client proof exists</li>
+                            <li>Explain how Zentrix thinks about common acquisition bottlenecks</li>
+                            <li>Make the founder-led approach easier to evaluate</li>
+                            <li>Keep the positioning honest while the company is still early-stage</li>
+                        </ul>
+                    </div>
+                    <div class="metrics-grid" data-reveal="left">
+                        <article class="metric-card">
+                            <strong>Lean</strong>
+                            <span>Founder-led and intentionally selective</span>
+                        </article>
+                        <article class="metric-card">
+                            <strong>Practical</strong>
+                            <span>Focused on real system design, not vague marketing language</span>
+                        </article>
+                        <article class="metric-card">
+                            <strong>Global</strong>
+                            <span>Based in Pakistan and designed for remote international work</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" data-reveal="up">
+                <div class="cta-card section-card">
+                    <p class="page-kicker">Next Step</p>
+                    <h2>Want a system like this for your business?</h2>
+                    <p>Book a strategy call and we’ll walk through the bottlenecks in your current acquisition flow and
+                        what to fix first.</p>
+                    <a href="book-call.html" class="btn primary">Book a Strategy Call</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="saas-footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">Zentrix <span>Media</span></div>
-                    <p>Zentrix Media is an AI-focused client acquisition firm helping coaches implement scalable
-                        marketing infrastructure designed for predictable revenue growth.</p>
+                    <p>Founder-led AI client acquisition systems for coaches, consultants, SaaS founders, and online businesses.</p>
+                    <p class="footer-location">Based in Pakistan • Working with clients worldwide</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="our-system.html">Our System</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Solutions</h4>
+                <div class="footer-column">
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="solutions.html#ai">AI Infrastructure</a></li>
-                        <li><a href="solutions.html#ads">Performance Advertising</a></li>
-                        <li><a href="solutions.html#conversion">Conversion Engineering</a></li>
-                        <li><a href="solutions.html#automation">Revenue Automation</a></li>
+                        <li><a href="solutions.html#ai">AI Lead Generation</a></li>
+                        <li><a href="solutions.html#conversion">Conversion Funnels</a></li>
+                        <li><a href="solutions.html#automation">Marketing Automation</a></li>
+                        <li><a href="solutions.html#strategy">Growth Strategy</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
+                <div class="footer-column">
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="book-call.html">Book a Call</a></li>
-                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank"
-                                rel="noopener noreferrer">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank"
-                                rel="noopener noreferrer">Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank"
-                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="insights.html">Blog</a></li>
+                        <li><a href="case-studies.html">Approach</a></li>
+                        <li><a href="insights.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:zentrixmediabyzt@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://wa.me/923035548888" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="book-call.html">Book Strategy Call</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Zentrix Media. All rights reserved.</p>
+                <p>&copy; 2026 Zentrix Media by ZT. Registered in Pakistan.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms.html">Terms of Service</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923035548888" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script src="assets/js/script.js"></script>
 </body>

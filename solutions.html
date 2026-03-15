@@ -4,623 +4,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions - Zentrix Media</title>
+    <title>AI Client Acquisition Services | Zentrix Media</title>
     <meta name="description"
-        content="Explore our AI-powered solutions for coaches and consultants: AI Infrastructure, Performance Advertising, Conversion Engineering, and Revenue Automation.">
+        content="Zentrix Media designs AI client acquisition systems for coaches, consultants, SaaS founders, and online businesses targeting predictable growth.">
     <link rel="canonical" href="https://zentrixmediabyzt.vercel.app/solutions.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Zentrix Media">
-    <meta property="og:title" content="Solutions - Zentrix Media">
+    <meta property="og:title" content="AI Client Acquisition Services | Zentrix Media">
     <meta property="og:description"
-        content="Explore our AI-powered solutions for coaches and consultants: AI Infrastructure, Performance Advertising, Conversion Engineering, and Revenue Automation.">
+        content="Explore AI lead generation, conversion funnels, marketing automation, and growth strategy services built for international client acquisition.">
     <meta property="og:url" content="https://zentrixmediabyzt.vercel.app/solutions.html">
     <meta property="og:image" content="https://zentrixmediabyzt.vercel.app/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Solutions - Zentrix Media">
+    <meta name="twitter:title" content="AI Client Acquisition Services | Zentrix Media">
     <meta name="twitter:description"
-        content="Explore our AI-powered solutions for coaches and consultants: AI Infrastructure, Performance Advertising, Conversion Engineering, and Revenue Automation.">
+        content="Explore AI lead generation, conversion funnels, marketing automation, and growth strategy services built for international client acquisition.">
     <meta name="twitter:image" content="https://zentrixmediabyzt.vercel.app/assets/images/og-image.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Solutions - Zentrix Media",
+            "name": "AI Client Acquisition Services | Zentrix Media",
             "url": "https://zentrixmediabyzt.vercel.app/solutions.html",
-            "description": "Explore our AI-powered solutions for coaches and consultants: AI Infrastructure, Performance Advertising, Conversion Engineering, and Revenue Automation."
+            "description": "Zentrix Media designs AI client acquisition systems for coaches, consultants, SaaS founders, and online businesses targeting predictable growth."
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .solutions-hero {
-            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
-            padding: 10rem 0 6rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .solutions-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(198, 167, 94, 0.1), transparent 70%);
-        }
-
-        .solutions-hero .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        .solution-section {
-            padding: 6rem 0;
-        }
-
-        .solution-section:nth-child(odd) {
-            background-color: var(--bg-primary);
-        }
-
-        .solution-section:nth-child(even) {
-            background-color: var(--bg-secondary);
-        }
-
-        .solution-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .solution-card {
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(198, 167, 94, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .solution-section:nth-child(even) .solution-card {
-            background-color: var(--bg-primary);
-        }
-
-        .solution-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px var(--shadow-gold);
-            border-color: var(--accent-gold);
-        }
-
-        .solution-card-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .solution-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .solution-card:hover .solution-card-image img {
-            transform: scale(1.05);
-        }
-
-        .solution-card-content {
-            padding: 2rem;
-        }
-
-        .solution-card h3 {
-            margin-bottom: 1rem;
-            color: var(--accent-gold);
-        }
-
-        .solution-features {
-            margin-top: 1.5rem;
-        }
-
-        .solution-feature {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 0.8rem;
-        }
-
-        .feature-icon {
-            color: var(--accent-gold);
-            margin-right: 0.8rem;
-            font-size: 0.9rem;
-            margin-top: 0.3rem;
-        }
-
-        .solutions-cta {
-            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .solutions-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent 70%);
-        }
-
-        .solutions-cta .container {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
-        @media (max-width: 768px) {
-            .solution-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="agency-page">
     <header class="sticky-nav">
         <div class="container">
             <div class="logo">Zentrix <span>Media</span></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="our-system.html">The System</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="solutions.html">Services</a></li>
+                    <li><a href="case-studies.html">Approach</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="book-call.html" class="cta-btn">Apply</a></li>
+                    <li><a href="insights.html">Blog</a></li>
+                    <li><a href="book-call.html" class="cta-btn">Book a Strategy Call</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="solutions-hero fade-in">
-            <div class="container">
-                <h1>Solutions</h1>
-                <p>Comprehensive client acquisition solutions designed specifically for coaches and consultants who want
-                    to scale with systems, not manual effort.</p>
-            </div>
-        </section>
-
-        <!-- AI Infrastructure Section -->
-        <section id="ai" class="solution-section fade-in">
-            <div class="container">
-                <div class="solution-header">
-                    <h2>AI Infrastructure</h2>
-                    <p>Smart CRM pipelines, AI chatbots, automated follow-ups, and lead qualification systems.</p>
+        <section class="page-hero">
+            <div class="container page-hero-shell">
+                <div class="page-copy" data-reveal="up">
+                    <p class="page-kicker">Services</p>
+                    <h1>AI Client Acquisition Services</h1>
+                    <p>We design intelligent marketing systems that help modern businesses generate qualified leads and
+                        scale revenue predictably.</p>
+                    <div class="page-actions">
+                        <a href="book-call.html" class="btn primary">Book a Strategy Call</a>
+                        <a href="case-studies.html" class="btn secondary">See Approach</a>
+                    </div>
+                    <div class="info-chip-row">
+                        <span class="detail-chip">US / UK positioning</span>
+                        <span class="detail-chip">Funnels + automation</span>
+                        <span class="detail-chip">Founder-led execution</span>
+                    </div>
                 </div>
-
-                <div class="solution-grid">
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://cdn.dribbble.com/userupload/10930312/file/original-d302878497a200d7ff9d4b1d7facfcc9.jpg?crop=0x0-4800x3600&format=webp&resize=400x300&vertical=center" alt="AI automation workflow visualization" loading="lazy" decoding="async"
-                                alt="AI Chatbots">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>AI Chatbots</h3>
-                            <p>Intelligent conversation systems that qualify leads and book calls 24/7.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Website & Instagram integration</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Personalized conversation flows</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Lead qualification automation</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="panel-card page-visual node-diagram" data-node-color="rgba(59,130,246,0.9)"
+                    data-connection-color="rgba(96,165,250,0.22)" data-reveal="left" aria-hidden="true">
+                    <div class="page-visual-content">
+                        <span class="visual-chip">Acquisition Stack</span>
+                        <h2>Built as one connected system, not isolated tactics.</h2>
+                        <p>Every service fits into the same growth engine: attract demand, qualify leads, convert
+                            intent, and automate the follow-up layer.</p>
                     </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04073133/crm3.png" alt="CRM pipeline dashboard" loading="lazy" decoding="async"
-                                alt="CRM Setup">
+                    <div class="visual-stat-grid">
+                        <div class="mini-card">
+                            <strong>01</strong>
+                            <span>Lead capture architecture</span>
                         </div>
-                        <div class="solution-card-content">
-                            <h3>CRM Setup & Pipelines</h3>
-                            <p>Structured client journey management from first touch to closed deal.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Custom pipeline development</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Automated stage progression</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Performance analytics dashboard</div>
-                                </div>
-                            </div>
+                        <div class="mini-card">
+                            <strong>02</strong>
+                            <span>Conversion-ready pages</span>
                         </div>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://htmlemail.io/img/post-automation/drip.png" alt="Email Automation">
+                        <div class="mini-card">
+                            <strong>03</strong>
+                            <span>Automation workflows</span>
                         </div>
-                        <div class="solution-card-content">
-                            <h3>Messaging Automation</h3>
-                            <p>Multi-channel communication systems that nurture leads automatically.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Email sequence development</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>WhatsApp business automation</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Behavioral trigger setup</div>
-                                </div>
-                            </div>
+                        <div class="mini-card">
+                            <strong>04</strong>
+                            <span>Revenue visibility</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Performance Advertising Section -->
-        <section id="ads" class="solution-section fade-in">
+        <section>
             <div class="container">
-                <div class="solution-header">
-                    <h2>Performance Advertising</h2>
-                    <p>Full-funnel Meta Ads strategy, creative direction, retargeting architecture, and scaling models.
-                    </p>
+                <div class="section-heading" data-reveal="up">
+                    <p class="page-kicker">What You Get</p>
+                    <h2>Services designed around client acquisition, not generic marketing retainers.</h2>
+                    <p>Zentrix builds the system behind predictable lead flow: strategy, funnel experience, automation,
+                        and performance alignment.</p>
                 </div>
+                <div class="service-grid">
+                    <article class="service-panel" id="ai" data-reveal="up">
+                        <div class="service-copy">
+                            <span class="visual-chip">AI Lead Generation</span>
+                            <h3>AI-powered prospecting and qualification for higher-intent pipeline.</h3>
+                            <p>We build AI-powered lead generation systems that identify, qualify and deliver
+                                high-intent prospects for your business.</p>
+                        </div>
+                        <div class="service-includes">
+                            <h4>Includes</h4>
+                            <ul class="service-points">
+                                <li>Outbound automation</li>
+                                <li>Prospect research</li>
+                                <li>Data enrichment</li>
+                                <li>AI targeting</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                <div class="solution-grid">
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://static.coupler.io/templates/facebook-ads-dashboard-template.png" alt="Facebook ads performance dashboard" loading="lazy" decoding="async"
-                                alt="Meta Ads Strategy">
+                    <article class="service-panel" id="conversion" data-reveal="up">
+                        <div class="service-copy">
+                            <span class="visual-chip">Conversion Funnel Design</span>
+                            <h3>Landing pages and funnel systems that turn attention into booked calls.</h3>
+                            <p>We design high-converting funnels and landing pages that turn traffic into booked sales
+                                calls and clients.</p>
                         </div>
-                        <div class="solution-card-content">
-                            <h3>Meta Ads Strategy</h3>
-                            <p>Comprehensive advertising frameworks designed for coaching businesses.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Audience research & segmentation</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Campaign structure development</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Budget allocation framework</div>
-                                </div>
-                            </div>
+                        <div class="service-includes">
+                            <h4>Includes</h4>
+                            <ul class="service-points">
+                                <li>Landing page design</li>
+                                <li>Funnel strategy</li>
+                                <li>Conversion optimization</li>
+                                <li>Messaging frameworks</li>
+                            </ul>
                         </div>
+                    </article>
+
+                    <article class="service-panel" id="automation" data-reveal="up">
+                        <div class="service-copy">
+                            <span class="visual-chip">Marketing Automation</span>
+                            <h3>Nurture, score, and convert leads without manual follow-up chaos.</h3>
+                            <p>Smart automation systems that nurture leads, increase engagement and improve
+                                conversions.</p>
+                        </div>
+                        <div class="service-includes">
+                            <h4>Includes</h4>
+                            <ul class="service-points">
+                                <li>CRM automation</li>
+                                <li>Email sequences</li>
+                                <li>Lead scoring</li>
+                                <li>Behavioral triggers</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-panel" id="strategy" data-reveal="up">
+                        <div class="service-copy">
+                            <span class="visual-chip">Growth Strategy</span>
+                            <h3>Strategic planning for a client acquisition engine that can actually scale.</h3>
+                            <p>Strategic consulting to design scalable acquisition systems tailored to your business
+                                model.</p>
+                        </div>
+                        <div class="service-includes">
+                            <h4>Includes</h4>
+                            <ul class="service-points">
+                                <li>Market positioning</li>
+                                <li>Customer journey mapping</li>
+                                <li>Acquisition strategy</li>
+                                <li>Growth planning</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="split-layout">
+                    <div class="content-stack section-card" data-reveal="up">
+                        <span class="visual-chip">How It Fits Together</span>
+                        <h2>The service model is modular, but the outcome is one growth engine.</h2>
+                        <p>Most agencies sell disconnected deliverables. Zentrix builds a connected acquisition system
+                            so traffic, qualification, funnel experience, and follow-up all move in the same
+                            direction.</p>
+                        <ul>
+                            <li>Clear ICP positioning before spend increases</li>
+                            <li>Funnel architecture aligned with sales intent</li>
+                            <li>CRM automation that protects lead quality</li>
+                            <li>Reporting focused on pipeline and revenue movement</li>
+                        </ul>
                     </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://blogs.perficient.com/files/2018/01/facebook-lead-ads-example-600x600.gif" alt="Facebook lead ad example" loading="lazy" decoding="async"
-                                alt="Lead Generation">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Lead Generation Campaigns</h3>
-                            <p>Targeted ad systems that attract qualified prospects to your business.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Multi-variant creative testing</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Conversion optimization</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Lead quality filtering</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://a.storyblok.com/f/47007/2400x1260/4cb21c7e8d/glossaryretargeting_v03.png/m/2880x0/filters%3Aquality%2880%29" alt="Retargeting campaign flow" loading="lazy" decoding="async"
-                                alt="Retargeting Systems">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Retargeting Systems</h3>
-                            <p>Multi-touchpoint remarketing architecture to re-engage prospects.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Pixel & event setup</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Audience segmentation</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Sequential messaging strategy</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="cards-grid" data-reveal="left">
+                        <article class="value-card">
+                            <strong class="highlight-number">4</strong>
+                            <h3>Core service pillars</h3>
+                            <p>Each one supports the same AI client acquisition objective.</p>
+                        </article>
+                        <article class="value-card">
+                            <strong class="highlight-number">1</strong>
+                            <h3>Unified strategy layer</h3>
+                            <p>Messaging, automation, and funnel decisions stay consistent.</p>
+                        </article>
+                        <article class="value-card">
+                            <strong class="highlight-number">0</strong>
+                            <h3>Wasted manual follow-up</h3>
+                            <p>The system is designed to reduce slow, inconsistent lead handling.</p>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Conversion Engineering Section -->
-        <section id="conversion" class="solution-section fade-in">
-            <div class="container">
-                <div class="solution-header">
-                    <h2>Conversion Engineering</h2>
-                    <p>Landing page design, funnel optimization, messaging alignment, and A/B testing.</p>
+        <section>
+            <div class="container" data-reveal="up">
+                <div class="cta-card section-card">
+                    <p class="page-kicker">Next Step</p>
+                    <h2>Ready to scale your client acquisition?</h2>
+                    <p>Book a strategy call and we’ll map the right combination of positioning, funnels, automation,
+                        and lead generation for your business.</p>
+                    <a href="book-call.html" class="btn primary">Book a Strategy Call</a>
                 </div>
-
-                <div class="solution-grid">
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://unbounce.com/photos/claimcompass-thumbnail.jpg" alt="Landing Pages">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>High-Converting Landing Pages</h3>
-                            <p>Strategically designed pages that turn visitors into booked calls.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Psychological trigger mapping</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Conversion-focused design</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Mobile optimization</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://cdn.prod.website-files.com/5b5729421aca332c60585f78/641391de8062bf9272217b00_landing-page-funnels.webp" alt="Landing page funnel structure" loading="lazy" decoding="async"
-                                alt="Funnel Pages">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Funnel Optimization</h3>
-                            <p>End-to-end conversion path development and refinement.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Multi-step funnel architecture</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Conversion leak detection</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>A/B testing framework</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width%3D850/uploads/users/23/posts/29222/image/roneous-modern-clean-wordpress-theme.jpg" alt="High-converting website design example" loading="lazy" decoding="async"
-                                alt="Website Design">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Messaging Alignment</h3>
-                            <p>Consistent communication strategy across all touchpoints.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Value proposition development</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Ad-to-landing page congruence</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Objection handling framework</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Revenue Automation Section -->
-        <section id="automation" class="solution-section fade-in">
-            <div class="container">
-                <div class="solution-header">
-                    <h2>Revenue Automation</h2>
-                    <p>End-to-end automation from first click to booked consultation.</p>
-                </div>
-
-                <div class="solution-grid">
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/emailautomation_13.webp?height=394&name=emailautomation_13.webp&width=650" alt="Email automation sequence" loading="lazy" decoding="async"
-                                alt="Automation Tools">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Lead Nurturing Systems</h3>
-                            <p>Automated sequences that build trust and drive action.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Multi-channel content strategy</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Engagement tracking</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Personalized content delivery</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://images.reallygooddesigns.com/2025/06/modern-transportation-and-logistics-company-website-design.png" alt="Marketing analytics dashboard" loading="lazy" decoding="async"
-                                alt="Booking Systems">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Appointment Booking Systems</h3>
-                            <p>Frictionless scheduling solutions that maximize conversions.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Calendar integration</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Automated reminders</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Pre-call qualification</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-card-image">
-                            <img src="https://i.pinimg.com/564x/84/e1/7f/84e17f1c5f7133adb12dd680f1949e6a.jpg" alt="Automated follow-up workflow" loading="lazy" decoding="async"
-                                alt="Analytics Dashboard">
-                        </div>
-                        <div class="solution-card-content">
-                            <h3>Performance Analytics</h3>
-                            <p>Comprehensive tracking and reporting for continuous improvement.</p>
-                            <div class="solution-features">
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>Custom dashboard development</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>KPI tracking & reporting</div>
-                                </div>
-                                <div class="solution-feature">
-                                    <div class="feature-icon"><i class="fas fa-check"></i></div>
-                                    <div>ROI calculation framework</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Solutions CTA -->
-        <section class="solutions-cta fade-in">
-            <div class="container">
-                <h2>Ready to Implement These Solutions in Your Business?</h2>
-                <p>We partner with growth-ready coaches who are serious about building long-term infrastructure.</p>
-                <p>Apply for a Private Strategy Consultation to discuss your custom implementation.</p>
-                <a href="book-call.html" class="btn primary">Apply Now</a>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="saas-footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">Zentrix <span>Media</span></div>
-                    <p>Zentrix Media is an AI-focused client acquisition firm helping coaches implement scalable
-                        marketing infrastructure designed for predictable revenue growth.</p>
+                    <p>Founder-led AI client acquisition systems for coaches, consultants, SaaS founders, and online businesses.</p>
+                    <p class="footer-location">Based in Pakistan • Working with clients worldwide</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="our-system.html">Our System</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Solutions</h4>
+                <div class="footer-column">
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="solutions.html#ai">AI Infrastructure</a></li>
-                        <li><a href="solutions.html#ads">Performance Advertising</a></li>
-                        <li><a href="solutions.html#conversion">Conversion Engineering</a></li>
-                        <li><a href="solutions.html#automation">Revenue Automation</a></li>
+                        <li><a href="solutions.html#ai">AI Lead Generation</a></li>
+                        <li><a href="solutions.html#conversion">Conversion Funnels</a></li>
+                        <li><a href="solutions.html#automation">Marketing Automation</a></li>
+                        <li><a href="solutions.html#strategy">Growth Strategy</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
+                <div class="footer-column">
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="book-call.html">Book a Call</a></li>
-                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank"
-                                rel="noopener noreferrer">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank"
-                                rel="noopener noreferrer">Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank"
-                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="insights.html">Blog</a></li>
+                        <li><a href="case-studies.html">Approach</a></li>
+                        <li><a href="insights.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:zentrixmediabyzt@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://wa.me/923035548888" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="book-call.html">Book Strategy Call</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Zentrix Media. All rights reserved.</p>
+                <p>&copy; 2026 Zentrix Media by ZT. Registered in Pakistan.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms.html">Terms of Service</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/zentrixmediabyzt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61588269346997" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/company/zentrix-media-by-zt/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923035548888" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script src="assets/js/script.js"></script>
 </body>

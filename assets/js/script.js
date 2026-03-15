@@ -184,6 +184,13 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileMenuBtn.style.fontSize = '1.5rem';
         mobileMenuBtn.style.cursor = 'pointer';
         mobileMenuBtn.style.display = 'none';
+        mobileMenuBtn.style.width = '2.85rem';
+        mobileMenuBtn.style.height = '2.85rem';
+        mobileMenuBtn.style.alignItems = 'center';
+        mobileMenuBtn.style.justifyContent = 'center';
+        mobileMenuBtn.style.borderRadius = '16px';
+        mobileMenuBtn.style.background = 'rgba(59, 130, 246, 0.08)';
+        mobileMenuBtn.style.lineHeight = '1';
 
         container.appendChild(mobileMenuBtn);
 
@@ -191,32 +198,64 @@ document.addEventListener('DOMContentLoaded', function () {
         style.textContent = `
             @media (max-width: 768px) {
                 .sticky-nav .container {
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) auto;
+                    align-items: center;
+                    gap: 0.85rem 1rem;
                 }
 
                 .mobile-menu-btn {
-                    display: block !important;
+                    display: inline-flex !important;
+                    grid-column: 2;
+                    justify-self: end;
+                    align-self: center;
+                }
+
+                .sticky-nav .logo {
+                    grid-column: 1;
+                    min-width: 0;
                 }
 
                 .sticky-nav nav {
-                    flex-basis: 100%;
+                    grid-column: 1 / -1;
+                    width: 100%;
                     max-height: 0;
                     overflow: hidden;
-                    transition: max-height 0.3s ease;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: max-height 0.3s ease, opacity 0.25s ease;
                 }
 
                 .sticky-nav nav.open {
-                    max-height: 300px;
+                    max-height: 420px;
+                    opacity: 1;
+                    pointer-events: auto;
                 }
 
                 .sticky-nav nav ul {
                     flex-direction: column;
-                    align-items: center;
-                    padding: 1rem 0;
+                    align-items: stretch;
+                    gap: 0.4rem;
+                    padding: 0.95rem 0 0.25rem;
                 }
 
                 .sticky-nav nav ul li {
-                    margin: 0.5rem 0;
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .sticky-nav nav ul li a {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 0.8rem 1rem;
+                    border-radius: 18px;
+                    text-align: center;
+                    background: rgba(255, 255, 255, 0.04);
+                }
+
+                .sticky-nav nav ul li a.cta-btn {
+                    margin-top: 0.3rem;
                 }
             }
         `;
@@ -235,6 +274,20 @@ document.addEventListener('DOMContentLoaded', function () {
             setMenuState(!nav.classList.contains('open'));
         });
 
+        nav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    setMenuState(false);
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && nav.classList.contains('open')) {
+                setMenuState(false);
+            }
+        });
+
         document.addEventListener('click', (e) => {
             if (!header.contains(e.target) && nav.classList.contains('open')) {
                 setMenuState(false);
@@ -242,136 +295,470 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-    const createNodeDiagram = () => {
-        const nodeDiagram = document.querySelector('.node-diagram');
-        if (!nodeDiagram) return;
+    const initializeCalendlyEmbed = () => {
+        const containers = document.querySelectorAll('[data-calendly-container]');
+        if (!containers.length) return;
 
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        containers.forEach((container) => {
+            const rawUrl = container.dataset.calendlyUrl;
+            const calendlyUrl = typeof rawUrl === 'string' ? rawUrl.trim() : '';
+            if (!calendlyUrl) return;
 
-        const canvas = document.createElement('canvas');
-        canvas.width = nodeDiagram.offsetWidth;
-        canvas.height = nodeDiagram.offsetHeight;
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        nodeDiagram.appendChild(canvas);
-
-        const ctx = canvas.getContext('2d');
-        let rafId = null;
-
-        class Node {
-            constructor(x, y, radius) {
-                this.x = x;
-                this.y = y;
-                this.radius = radius;
-                this.color = 'rgba(198, 167, 94, 0.8)';
+            let url;
+            try {
+                url = new URL(calendlyUrl);
+            } catch (error) {
+                return;
             }
 
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.fill();
-                ctx.closePath();
+            const fallback = container.querySelector('.scheduler-fallback');
+            if (fallback) {
+                fallback.remove();
             }
-        }
+            url.searchParams.set('hide_gdpr_banner', '1');
+            url.searchParams.set('primary_color', '3b82f6');
 
-        class Connection {
-            constructor(nodeA, nodeB) {
-                this.nodeA = nodeA;
-                this.nodeB = nodeB;
-                this.color = 'rgba(198, 167, 94, 0.3)';
-            }
+            const iframe = document.createElement('iframe');
+            iframe.src = url.toString();
+            iframe.title = 'Schedule a strategy call with Zentrix Media';
+            iframe.loading = 'lazy';
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
 
-            draw() {
-                ctx.beginPath();
-                ctx.moveTo(this.nodeA.x, this.nodeA.y);
-                ctx.lineTo(this.nodeB.x, this.nodeB.y);
-                ctx.strokeStyle = this.color;
-                ctx.lineWidth = 1;
-                ctx.stroke();
-                ctx.closePath();
-            }
-        }
-
-        const nodes = [];
-        const connections = [];
-        const numNodes = 8;
-
-        for (let i = 0; i < numNodes; i += 1) {
-            nodes.push(new Node(
-                Math.random() * canvas.width,
-                Math.random() * canvas.height,
-                3 + Math.random() * 3
-            ));
-        }
-
-        for (let i = 0; i < nodes.length; i += 1) {
-            for (let j = i + 1; j < nodes.length; j += 1) {
-                if (Math.random() > 0.5) {
-                    connections.push(new Connection(nodes[i], nodes[j]));
-                }
-            }
-        }
-
-        const draw = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            connections.forEach((connection) => connection.draw());
-            nodes.forEach((node) => node.draw());
-        };
-
-        const animate = () => {
-            draw();
-            rafId = requestAnimationFrame(animate);
-        };
-
-        const stopAnimation = () => {
-            if (rafId) {
-                cancelAnimationFrame(rafId);
-                rafId = null;
-            }
-        };
-
-        const startAnimation = () => {
-            if (!rafId && !document.hidden) {
-                animate();
-            }
-        };
-
-        startAnimation();
-
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                stopAnimation();
-            } else {
-                startAnimation();
-            }
-        });
-
-        window.addEventListener('resize', () => {
-            canvas.width = nodeDiagram.offsetWidth;
-            canvas.height = nodeDiagram.offsetHeight;
-            draw();
+            container.classList.add('is-live');
+            container.appendChild(iframe);
         });
     };
 
-    const updateFooterYear = () => {
-        const currentYear = new Date().getFullYear();
-        document.querySelectorAll('.footer-bottom p').forEach((node) => {
-            node.textContent = `© ${currentYear} Zentrix Media. All rights reserved.`;
+    const createNodeDiagram = () => {
+        const diagrams = document.querySelectorAll('.node-diagram');
+        if (!diagrams.length) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            diagrams.forEach((diagram) => diagram.classList.add('motion-reduced'));
+            return;
+        }
+
+        const instances = [];
+
+        diagrams.forEach((nodeDiagram) => {
+            if (nodeDiagram.dataset.diagramEnhanced === 'true') return;
+            nodeDiagram.dataset.diagramEnhanced = 'true';
+
+            const canvas = document.createElement('canvas');
+            canvas.classList.add('node-diagram-canvas');
+            nodeDiagram.prepend(canvas);
+
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            const nodeColor = nodeDiagram.dataset.nodeColor || 'rgba(59,130,246,0.88)';
+            const connectionColor = nodeDiagram.dataset.connectionColor || 'rgba(96,165,250,0.18)';
+            const nodes = [];
+            let width = 0;
+            let height = 0;
+            let rafId = null;
+            let inView = true;
+
+            class Node {
+                constructor() {
+                    this.reset(true);
+                }
+
+                reset(initial) {
+                    this.radius = 2 + Math.random() * 3;
+                    this.x = initial ? Math.random() * width : Math.random() > 0.5 ? width + 20 : -20;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.32;
+                    this.vy = (Math.random() - 0.5) * 0.32;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x <= 0 || this.x >= width) {
+                        this.vx *= -1;
+                    }
+
+                    if (this.y <= 0 || this.y >= height) {
+                        this.vy *= -1;
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = nodeColor;
+                    ctx.shadowBlur = 14;
+                    ctx.shadowColor = nodeColor;
+                    ctx.fill();
+                    ctx.closePath();
+                    ctx.shadowBlur = 0;
+                }
+            }
+
+            const setCanvasSize = () => {
+                const bounds = nodeDiagram.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                width = Math.max(1, Math.floor(bounds.width));
+                height = Math.max(1, Math.floor(bounds.height));
+
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+                if (!nodes.length) {
+                    const computedCount = Math.max(8, Math.min(18, Math.round((width * height) / 32000)));
+                    const totalNodes = Number(nodeDiagram.dataset.nodeCount) || computedCount;
+                    for (let i = 0; i < totalNodes; i += 1) {
+                        nodes.push(new Node());
+                    }
+                    return;
+                }
+
+                nodes.forEach((node) => {
+                    node.x = Math.min(Math.max(node.x, 0), width);
+                    node.y = Math.min(Math.max(node.y, 0), height);
+                });
+            };
+
+            const draw = () => {
+                ctx.clearRect(0, 0, width, height);
+
+                const maxDistance = Math.max(110, Math.min(190, Math.min(width, height) * 0.32));
+
+                nodes.forEach((node) => node.update());
+
+                for (let i = 0; i < nodes.length; i += 1) {
+                    for (let j = i + 1; j < nodes.length; j += 1) {
+                        const nodeA = nodes[i];
+                        const nodeB = nodes[j];
+                        const dx = nodeA.x - nodeB.x;
+                        const dy = nodeA.y - nodeB.y;
+                        const distance = Math.hypot(dx, dy);
+
+                        if (distance > maxDistance) continue;
+
+                        ctx.beginPath();
+                        ctx.moveTo(nodeA.x, nodeA.y);
+                        ctx.lineTo(nodeB.x, nodeB.y);
+                        ctx.strokeStyle = connectionColor;
+                        ctx.lineWidth = 1;
+                        ctx.globalAlpha = 1 - distance / maxDistance;
+                        ctx.stroke();
+                        ctx.closePath();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+
+                nodes.forEach((node) => node.draw());
+            };
+
+            const animate = () => {
+                if (document.hidden || !inView) {
+                    rafId = null;
+                    return;
+                }
+
+                draw();
+                rafId = requestAnimationFrame(animate);
+            };
+
+            const stopAnimation = () => {
+                if (!rafId) return;
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            };
+
+            const startAnimation = () => {
+                if (rafId || document.hidden || !inView) return;
+                animate();
+            };
+
+            setCanvasSize();
+
+            const visibilityObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    inView = entry.isIntersecting;
+                    if (inView) {
+                        startAnimation();
+                    } else {
+                        stopAnimation();
+                    }
+                });
+            }, {
+                threshold: 0.08
+            });
+
+            visibilityObserver.observe(nodeDiagram);
+            startAnimation();
+
+            instances.push({
+                setCanvasSize,
+                startAnimation,
+                stopAnimation
+            });
         });
+
+        if (!instances.length) return;
+
+        window.addEventListener('resize', () => {
+            instances.forEach((instance) => instance.setCanvasSize());
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            instances.forEach((instance) => {
+                if (document.hidden) {
+                    instance.stopAnimation();
+                } else {
+                    instance.startAnimation();
+                }
+            });
+        });
+    };
+
+    const initializeCounters = () => {
+        const counters = document.querySelectorAll('[data-count]');
+        if (!counters.length) return;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const formatValue = (value, decimals) => {
+            if (decimals > 0) {
+                return value.toFixed(decimals);
+            }
+
+            return Math.round(value).toLocaleString('en-US');
+        };
+
+        const animateCounter = (counter) => {
+            if (counter.dataset.counted === 'true') return;
+            counter.dataset.counted = 'true';
+
+            const endValue = Number(counter.dataset.count || 0);
+            const prefix = counter.dataset.prefix || '';
+            const suffix = counter.dataset.suffix || '';
+            const decimals = Number(counter.dataset.decimals || (Number.isInteger(endValue) ? 0 : 1));
+            const render = (value) => {
+                counter.textContent = `${prefix}${formatValue(value, decimals)}${suffix}`;
+            };
+
+            if (prefersReducedMotion) {
+                render(endValue);
+                return;
+            }
+
+            const duration = 1400;
+            let startTime = null;
+
+            const updateCounter = (timestamp) => {
+                if (!startTime) {
+                    startTime = timestamp;
+                }
+
+                const progress = Math.min((timestamp - startTime) / duration, 1);
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+                render(endValue * easedProgress);
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    render(endValue);
+                }
+            };
+
+            requestAnimationFrame(updateCounter);
+        };
+
+        if (prefersReducedMotion) {
+            counters.forEach((counter) => animateCounter(counter));
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.35
+        });
+
+        counters.forEach((counter) => observer.observe(counter));
+    };
+
+    const initializeCaseStudies = () => {
+        document.querySelectorAll('.saas-case-grid').forEach((grid) => {
+            const cards = Array.from(grid.querySelectorAll('details'));
+            if (!cards.length) return;
+
+            cards.forEach((card) => {
+                card.addEventListener('toggle', () => {
+                    if (!card.open) return;
+
+                    cards.forEach((otherCard) => {
+                        if (otherCard !== card) {
+                            otherCard.open = false;
+                        }
+                    });
+                });
+            });
+        });
+    };
+
+    const initializeTestimonialSlider = () => {
+        const sections = document.querySelectorAll('.saas-testimonials');
+        if (!sections.length) return;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        sections.forEach((section) => {
+            const slides = Array.from(section.querySelectorAll('.testimonial-slide'));
+            const dots = Array.from(section.querySelectorAll('.testimonial-dots button'));
+            const prevButton = section.querySelector('.testimonial-nav.prev');
+            const nextButton = section.querySelector('.testimonial-nav.next');
+            if (!slides.length) return;
+
+            let currentIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+            let autoAdvance = null;
+
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+
+            const setActiveSlide = (index) => {
+                currentIndex = (index + slides.length) % slides.length;
+
+                slides.forEach((slide, slideIndex) => {
+                    const isActive = slideIndex === currentIndex;
+                    slide.classList.toggle('is-active', isActive);
+                    slide.setAttribute('aria-hidden', String(!isActive));
+                });
+
+                dots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle('is-active', dotIndex === currentIndex);
+                });
+            };
+
+            const startAutoAdvance = () => {
+                if (prefersReducedMotion || slides.length < 2) return;
+                autoAdvance = window.setInterval(() => {
+                    setActiveSlide(currentIndex + 1);
+                }, 5000);
+            };
+
+            const stopAutoAdvance = () => {
+                if (!autoAdvance) return;
+                window.clearInterval(autoAdvance);
+                autoAdvance = null;
+            };
+
+            prevButton?.addEventListener('click', () => {
+                stopAutoAdvance();
+                setActiveSlide(currentIndex - 1);
+                startAutoAdvance();
+            });
+
+            nextButton?.addEventListener('click', () => {
+                stopAutoAdvance();
+                setActiveSlide(currentIndex + 1);
+                startAutoAdvance();
+            });
+
+            dots.forEach((dot, dotIndex) => {
+                dot.addEventListener('click', () => {
+                    stopAutoAdvance();
+                    setActiveSlide(dotIndex);
+                    startAutoAdvance();
+                });
+            });
+
+            section.addEventListener('mouseenter', stopAutoAdvance);
+            section.addEventListener('mouseleave', startAutoAdvance);
+
+            setActiveSlide(currentIndex);
+            startAutoAdvance();
+        });
+    };
+
+    const initializeFloatingStrategyCTA = () => {
+        if (document.querySelector('.floating-strategy-cta')) return;
+
+        const path = window.location.pathname;
+        if (
+            path.endsWith('/book-call.html') ||
+            path === '/book-call.html' ||
+            path.endsWith('/contact.html') ||
+            path === '/contact.html'
+        ) {
+            return;
+        }
+
+        const isNestedPage = /\/(insights|case-studies)\//.test(path);
+        const strategyHref = isNestedPage ? '../book-call.html' : 'book-call.html';
+        const floatingCTA = document.createElement('a');
+        floatingCTA.className = 'floating-strategy-cta';
+        floatingCTA.href = strategyHref;
+        floatingCTA.setAttribute('aria-label', 'Book a strategy call');
+        floatingCTA.innerHTML = `
+            <span class="floating-strategy-copy">
+                <strong>Book a Strategy Call</strong>
+                <small>30 min growth review</small>
+            </span>
+            <span class="floating-strategy-icon" aria-hidden="true">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </span>
+        `;
+
+        document.body.appendChild(floatingCTA);
+        document.body.classList.add('has-floating-cta');
+    };
+
+    const initializeMarquee = () => {
+        const track = document.querySelector('.marquee-track');
+        if (!track || track.dataset.enhanced === 'true') return;
+
+        track.dataset.enhanced = 'true';
+        track.innerHTML = `${track.innerHTML}${track.innerHTML}`;
     };
 
     const revealSections = () => {
-        document.querySelectorAll('section').forEach((section) => {
-            section.classList.add('fade-in');
+        const revealTargets = document.querySelectorAll('[data-reveal], .fade-in');
+        if (!revealTargets.length) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            revealTargets.forEach((target) => target.classList.add('is-visible'));
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: '0px 0px -40px 0px'
         });
+
+        revealTargets.forEach((target) => observer.observe(target));
     };
 
     revealSections();
+    initializeMarquee();
     enableSmoothScroll();
     submitAjaxForms();
     initializeHeadingUnderlines();
     createMobileMenu();
+    initializeCalendlyEmbed();
     createNodeDiagram();
-    updateFooterYear();
+    initializeCounters();
+    initializeCaseStudies();
+    initializeTestimonialSlider();
+    initializeFloatingStrategyCTA();
 });
